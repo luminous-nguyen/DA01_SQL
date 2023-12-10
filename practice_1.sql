@@ -1,0 +1,15 @@
+select c.name from city c where c.countrycode = 'USA' and population > 120000;
+select * from city c where countrycode = 'JPN';
+select s.city, s.state from station s;
+select distinct s.city from station s where s.city REGEXP '^[aeiou]';
+select distinct s.city from station s where s.city REGEXP '[aeiou]$';
+select distinct s.city from station s where not s.city REGEXP '^[aeiou]';
+select e.name from employee e order by e.name asc;
+select e.name from employee e where salary > 2000 and months < 10 order by employee_id asc;
+select p.product_id from products p where low_fats = 'Y' and recyclable = 'Y';
+select c.name from customer c where referee_id not like 2 or referee_id is null;
+select a.name, a.population, a.area from world a where a.area >= 3000000 or a.population >= 25000000;
+select v.author_id as id from views v where author_id = viewer_id group by v.author_id order by v.author_id asc;
+select part, assembly_step FROM parts_assembly where finish_date is null;
+select * from lyft_drivers where yearly_salary <= 30000 or yearly_salary >= 70000;
+select * from uber_advertising where money_spent > 100000 and year = 2019;
